@@ -14,7 +14,11 @@
 }
 
 
-// примерси v2.0
+@mixin rubberProportionality($height, $width){
+  padding-top: $height/$width * 100%;
+}
+
+
 
 
 /**
