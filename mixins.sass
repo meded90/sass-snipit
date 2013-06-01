@@ -1,0 +1,67 @@
+=respond-to($media)
+  // Phone
+  @if $media == mobile
+    @media (max-width: 200px)
+      @content
+  // Phone
+  @if $media == phone
+    @media (max-width: 480px)
+      @content
+  // Tablet Portrait
+  @if $media == tablet
+    @media (min-width: 768px) and (max-width: 979px)
+      @content
+  //  Desktop
+  @if $media == desktop
+    @media (min-width: 980px) and (max-width: 1199px)
+      @content
+  // Large Desktop
+  @if $media == large-desktop
+    @media (min-width: 1200px)
+      @content
+  // Non-Retina
+  @if $media == non-retina
+    @media screen and (-webkit-max-device-pixel-ratio: 1)
+      @content
+  // Retina Only
+  @if $media == retina
+    @media screen and (-webkit-min-device-pixel-ratio: 2)
+      @content
+
+=mobile
+  @media (max-width: 200px)
+    /*responsive - mobile*/
+    @content
+=phone
+  @media (max-width: 480px)
+    /*responsive - phone*/
+    @content
+=tablet-vertical
+  @media (min-width: 481px) and (max-width: 767px)
+    /*responsive - tablet-vertical*/
+    @content
+=tablet
+  @media (min-width: 768px) and (max-width: 979px)
+    /*responsive - tablet*/
+    @content
+=desktop
+  @media (min-width: 980px) and (max-width: 1199px)
+    /*responsive - desktop*/
+    @content
+=large-desktop
+  @media (min-width: 1200px)
+    /*responsive - desktop-desktop*/
+    @content
+
+=tablet-vertical-less
+  @media (max-width: 767px)
+    /*responsive - tablet-vertical-less*/
+    @content
+=tablet-less
+  @media (max-width: 979px)
+    /*responsive - tablet-less*/
+    @content
+=desktop-less
+  @media (max-width: 1199px)
+    /*responsive - desktop-less*/
+    @content
