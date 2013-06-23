@@ -1,3 +1,17 @@
+@mixin fantom() {
+
+  &:before {
+    content: "";
+    height: 100%;
+    width: 0;
+    margin-left: -0.3em;
+    display: inline-block;
+    vertical-align: middle;
+
+  }
+}
+
+
 @mixin placeholder(){
   ::-webkit-input-placeholder{
     @content;
