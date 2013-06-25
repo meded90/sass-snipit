@@ -1,6 +1,6 @@
-@mixin fantom() {
+@mixin fantom($target:'&:before') {
 
-  &:before {
+  #{$target} {
     content: "";
     height: 100%;
     width: 0;
