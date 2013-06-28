@@ -21,3 +21,7 @@ isDevice = function (name) {
         $(document).trigger(name);
     }
 };
+whatDevice()
+$(window).resize(function () {
+   whatDevice()
+})
