@@ -65,3 +65,40 @@
   @media (max-width: 1199px)
     /*responsive - desktop-less*/
     @content
+
+
+
+
+.debug-respond
+  &::before
+    position: absolute
+    top: 50%
+    right: 0
+    padding: 2px 4px
+    display: inline-block
+    +rotate(-100grad)
+
+    +large-desktop()
+      content: "large-desktop"
+      background-color: rgba(5, 21, 255, 0.51)
+      margin-right: -42px
+    +desktop()
+      content: "desktop"
+      background-color: rgba(33, 158, 255, 0.50)
+      margin-right: -20px
+    +tablet()
+      content: "tablet"
+      background-color: rgba(13, 255, 17, 0.50)
+      margin-right: -13px
+    +tablet-vertical()
+      content: "tablet-vertical"
+      background-color: rgba(208, 255, 22, 0.50)
+      margin-right: -43px
+    +phone()
+      content: "phone"
+      background-color: rgba(255, 0, 5, 0.50)
+      margin-right: -14px
+    +mobile()
+      content: "mobile"
+      background-color: rgba(255, 130, 3, 0.51)
+      margin-right: -16px
