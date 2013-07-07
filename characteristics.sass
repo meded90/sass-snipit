@@ -1,0 +1,51 @@
+
+// свойства значения разделенные много точием
+
+// пример
+// NAME.................val
+// NAME2...............val2
+// NAME3...............val3
+
+// html
+//<ul class="characteristics ">
+//  <li class="characteristics__item">
+//    <table><tbody><tr>
+//      <td class="characteristics__name"><span>ул. Альпинистов, 85 (Кольцовский тракт, 7-й км) </span></td>
+//      <td class="characteristics__val"><span>78 шт</span></td>
+//    </tr></tbody></table>
+//  </li>
+//</ul>
+
+.characteristics
+  margin: 0
+  list-style: none
+
+.characteristics__item
+  width: 100%
+  display: inline-block
+  margin-bottom: 15px
+
+  table
+    width: 100%
+  td
+    padding: 0px
+  span
+    position: relative
+    bottom: -0.2em
+    vertical-align: bottom
+    line-height: 1
+
+.characteristics__name
+  width: 99%
+  border-bottom: 1px dotted  #acaeb4
+  span
+    background-color: #f9f9f9
+    padding:  0 5px 0 0
+
+
+.characteristics__val
+  white-space: nowrap
+  background: inherit
+  vertical-align: bottom
+  span
+    padding: 0 0 0 10px
