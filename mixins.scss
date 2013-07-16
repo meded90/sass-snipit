@@ -306,16 +306,39 @@ sizingMethod='scale')";
     display:inline-block;
   }
 }
-
+// retina iPad  makbook pro
 @mixin  retina(){
-  @media only screen and (-webkit-min-device-pixel-ratio: 2.0),
-       only screen and (min--moz-device-pixel-ratio: 2.0),
-       only screen and (-o-min-device-pixel-ratio: 200/100),
-       only screen and (min-device-pixel-ratio: 2.0) {
-        @content
-       }
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 2.0),
+    only screen and (min--moz-device-pixel-ratio: 2.0),
+    only screen and (-o-min-device-pixel-ratio: 200/100),
+    only screen and (min-device-pixel-ratio: 2.0) {
+    @content
+  }
 }
 
+// animation
+@mixin  keyframes($name:"laneAnimation"){
+  @-webkit-keyframes #{$name}{
+    @content
+  }
+  @-moz-keyframes #{$name} {
+    @content
+  }
+  @-o-keyframes #{$name} {
+    @content
+  }
+  @keyframes #{$name} {
+    @content
+  }
+}
+// animation
+@mixin  animation($name:"laneAnimation", $time:5s){
+  -webkit-animation: $name $time infinite; /* Safari 4+ */
+  -moz-animation:    $name $time infinite; /* Fx 5+ */
+  -o-animation:      $name $time infinite; /* Opera 12+ */
+  animation:         $name $time infinite; /* IE 10+ */
+}
 
 // внуртри нее сылки
 /**
@@ -451,3 +474,6 @@ sizingMethod='scale')";
   background-color: $color;
   background-color: rgba($color, $value);
 }
+
+
+//
